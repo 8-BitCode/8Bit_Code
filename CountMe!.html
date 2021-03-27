@@ -19,7 +19,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
-        <a href="CountMe!.html">Count Me!</a>
+        <a href="Pong.html">Pong?</a>
     </div>
 
     <button onclick="showSidebar()" id="NavButton">
@@ -27,41 +27,7 @@
         <span></span>
         <span></span>
     </button>
-    <button onclick="HELO()">H E L O</button>
-
-    <h1>Count Me!</h1>
    
-    <div>
-    As a chronic Procrastinator, i dont get things done however if i count myself in<br>
-    before i think about it, i just do the task at hand essentially, this page does that for me<br>
-    (P.S. this doesnt work on chrome so i was forced to use firefox, please dont ask why)<br>
-    
-    </br>
-    between X and Y amount of time randomly, a notifiction will pop up
-    </br>
-    </br>
-    Time in Minutes:
-    </div>
-    
-    <input type="text" placeholder="X" id="X"><input type="text" placeholder="Y" id="Y"><button onclick="subscribe()">START</button>
-    <script>
-
-        addEventListener("load", async () =>{
-            let sw = await navigator.serviceWorker.register("./sw.js")
-            console.log(sw)
-        })
-
-        async function subscribe(){
-            let sw = await navigator.serviceWorker.ready;
-            let push = await sw.pushManager.subscribe({
-                userVisibleOnly:true,
-                applicationServerKey:'BDfau5pPu_eiLWIOg7WBAAIzwY7ioSz4q5JlIC_rrsPbEruoXgZrqKiUoWaH6v0hCskGEz3OZZt_8IN2vZlF314'
-                
-            })
-            console.log(JSON.stringify(push))
-        }
-    </script>  
-    
 
 
 
